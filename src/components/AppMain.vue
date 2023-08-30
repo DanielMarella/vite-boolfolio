@@ -1,8 +1,16 @@
 <template>
     <div>
-        <p v-for="project in projects">
-            {{ project.title }}
-        </p>
+
+        <div class="card-project">
+            <div class="single-card" v-for="project in projects">
+                <h2>
+                    {{ project.title }}
+                </h2>
+                <p>
+                    {{ project.content.substr(0, 200) }}
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -46,5 +54,23 @@ export default {
 
 
 <style lang="scss">
-    
+    div.card-project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+    div.single-card{
+        border: 2px solid orangered;
+        padding: 1rem;
+        background-color: lightgray;
+        border-radius: 20px;
+        color: black;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        width: calc((100% / 3) - 1rem);
+    }
+    }
+
 </style>
