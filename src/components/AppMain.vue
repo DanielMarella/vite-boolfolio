@@ -22,13 +22,12 @@ export default {
 
     methods: {
         getProjects(){
-
             axios.get(this.apiUrl, {
                 params: {}
             })
             .then((response)=> {
-                console.log(response.data.results);
-                this.projects = response.data.results;
+                console.log(response.data.results.data);
+                this.projects = response.data.results.data;
             })
             .catch(function (error) {
                 console.log(error);
@@ -36,11 +35,11 @@ export default {
 
         },
 
+    },
     created(){
         this.getProjects();
     },
 
-    },
 
 }
 </script>
