@@ -2,14 +2,14 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">
+                    <router-link  :to="{name: 'homepage'}">
                         Home
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#">
+                    <router-link :to="{name: 'projects'}">
                         Projects
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </nav>
