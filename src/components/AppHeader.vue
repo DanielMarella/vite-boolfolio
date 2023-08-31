@@ -1,14 +1,9 @@
 <template>
         <nav>
             <ul>
-                <li>
-                    <router-link  :to="{name: 'homepage'}">
-                        Home
-                    </router-link>
-                </li>
-                <li>
-                    <router-link :to="{name: 'projects'}">
-                        Projects
+                <li v-for="link in links">
+                    <router-link  :to="link.route ">
+                       {{link.name}}
                     </router-link>
                 </li>
             </ul>
@@ -16,7 +11,22 @@
 </template>
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+
+    data() {
+        return {
+            links : [
+                {
+                    route: 'homepage',
+                    name: 'HomePage'
+                },
+                {
+                    route: 'projects',
+                    name: 'Projects'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style lang="scss">
