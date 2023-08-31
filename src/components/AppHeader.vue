@@ -17,7 +17,7 @@ export default {
         return {
             links : [
                 {
-                    route: 'homepage',
+                    route: './',
                     name: 'HomePage'
                 },
                 {
