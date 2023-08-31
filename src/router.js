@@ -7,7 +7,7 @@ import Projects from './pages/Projects'
 
 
 
-const router = VueRouter.createRouter({
+const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
