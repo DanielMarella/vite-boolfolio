@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 //importo componenti
-import HomePage from './pages/HomePage'
-import Projects from './pages/Projects'
+import HomePage from './pages/HomePage.vue'
+import Projects from './pages/Projects.vue'
 
 
 
